@@ -175,7 +175,7 @@ table {
   }
 }
 
-/* HEADER SECTION */
+/* HEADER SECTION 
 .header {
   position: absolute;
   z-index: 2;
@@ -261,7 +261,133 @@ table {
       }
     }
   }
+}*/
+
+
+.header {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  .header--container {
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    @media (max-width: 900px) {
+      width: 90vw; /* Adjust the container width for smaller screens */
+    }
+
+    @media (max-width: 600px) {
+      justify-content: center;
+      margin-top: 20px; /* Adjust top margin for mobile */
+      width: 100%; /* Full width for mobile */
+    }
+
+    .header--brand {
+      color: #BB8E3A;
+      font-family: $archivo;
+      font-weight: 200;
+      font-size: rem(45);
+      line-height: 100%;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin-left: 100px;
+      padding-left: 100px;
+      font-family: $playfair;
+      margin-top: 5px;
+
+      @media (max-width: 900px) {
+        font-size: rem(35); /* Adjust font size for smaller screens */
+        margin-left: 50px;
+        padding-left: 50px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: rem(30); /* Further reduce font size for mobile */
+        margin-left: 20px;
+        padding-left: 20px;
+      }
+
+      span {
+        font-size: rem(14);
+        padding-left: 10px;
+
+        a {
+          text-decoration: none;
+          color: $text;
+        }
+      }
+    }
+
+    .header--menu {
+      display: inline-flex;
+      gap: 0.2em;
+      align-items: center;
+
+      @media (max-width: 900px) {
+        gap: 0.5em; /* Increase gap on smaller screens */
+      }
+
+      @media (max-width: 600px) {
+        display: none; /* Hide menu for mobile */
+      }
+
+      li {
+        padding: 10px 30px;
+        color: $text;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        pointer-events: all;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        svg {
+          path {
+            transition: all 0.4s ease-in-out;
+          }
+        }
+
+        &:hover {
+          color: $hover;
+          svg {
+            path {
+              stroke: $hover;
+            }
+          }
+        }
+      }
+
+      .nav-icons a {
+        font-size: rem(15);
+        text-decoration: none;
+        color: $text;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .night--mode {
+      @media (max-width: 600px) {
+        display: block; /* Show night mode button on mobile */
+      }
+    }
+  }
 }
+
 
 .side-bar {
   position: fixed;
