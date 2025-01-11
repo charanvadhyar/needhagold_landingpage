@@ -5,7 +5,7 @@
   "main": "public/index.html",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build public/index.html --no-minify --public-url ./",
+    "build": "parcel build public/index.html --out-dir dist  --public-url ./"
     "deploy": "vercel --prod"
   },
   "devDependencies": {
