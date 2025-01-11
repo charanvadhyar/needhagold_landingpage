@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "lib": ["es6", "dom"],
+    "rootDir": "public/src", // Specify the location of your TypeScript files
+    "outDir": "public/dist", // Output compiled JavaScript to a 'dist' folder
+    "moduleResolution": "node"
+  },
+  "include": [
+    "public/src/**/*.ts" // Include all TypeScript files in the 'public/src' directory
+  ],
+  "exclude": [
+    "node_modules", // Exclude unnecessary files and directories
+    "public/dist"   // Avoid re-processing compiled files
+  ]
+}
