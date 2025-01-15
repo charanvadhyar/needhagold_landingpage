@@ -175,94 +175,7 @@ table {
   }
 }
 
-/* HEADER SECTION 
-.header {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-
-  .header--container {
-    display: flex;
-    width: 80vw;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-    opacity: 0;
-    @media (max-width: 600px) {
-      justify-content: center;
-    }
-    .header--brand {
-      color: #BB8E3A;
-      font-family: $archivo;
-      font-weight: 200;
-      font-size: rem(45);
-      line-height: 100%;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      margin-left: 100px;
-      padding-left: 100px;
-      font-family: $playfair;
-      margin-top: 5px;
-
-      span {
-        font-size: rem(14);
-        padding-left: 10px;
-
-        a {
-          text-decoration: none;
-          color: $text;
-        }
-      }
-    }
-    .header--menu {
-      display: inline-flex;
-      gap: 0.2em;
-      align-items: center;
-      @media (max-width: 600px) {
-        display: none;
-      }
-      li {
-        padding: 10px 30px;
-        color: $text;
-        cursor: pointer;
-        transition: all 0.4s ease-in-out;
-        pointer-events: all;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        svg {
-          path {
-            transition: all 0.4s ease-in-out;
-          }
-        }
-        &:hover {
-          color: $hover;
-          svg {
-            path {
-              stroke: $hover;
-            }
-          }
-        }
-      }
-      .nav-icons a {
-        font-size: rem(15);
-        text-decoration: none;
-        color: $text;
-        transition: all 0.4s ease-in-out;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}*/
-
+ 
 
 .header {
   position: absolute;
@@ -387,6 +300,8 @@ table {
     }
   }
 }
+
+
 
 
 .side-bar {
@@ -685,14 +600,15 @@ table {
   height: 100lvh;
   opacity: 0;
   z-index: 2;
+
   @media (max-width: 600px) {
-    align-content: center;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: flex-end; /* Align the content to the bottom */
+    align-items: center;
     width: 100%;
     left: 0;
   }
+
   .hero--content {
     width: 100%;
     max-width: 500px;
@@ -704,9 +620,11 @@ table {
       display: flex;
       flex-direction: column;
       align-content: center;
-      height: 100lvh;
-      justify-content: space-between;
+      height: auto;
+      justify-content: flex-end; /* Push content to the bottom */
+      padding-bottom: 50px; /* Add spacing from the bottom */
     }
+
     h1 {
       position: relative;
       left: -12px;
@@ -718,26 +636,31 @@ table {
       color: $text;
       text-align: right;
       margin-bottom: 40px;
+
       @media (max-width: 600px) {
         left: unset;
         font-size: rem(70);
         margin-bottom: 0;
-        margin-top: 75px;
+        margin-top: 0;
         text-align: center;
+        padding-top: 0; /* Remove top padding */
       }
     }
+
     p {
       font-weight: 200;
       font-size: rem(13);
       line-height: 180%;
       text-align: right;
       margin-bottom: 30px;
+
       @media (max-width: 600px) {
-        margin: 0 auto 30px;
+        margin: 10px auto;
         width: 85%;
         text-align: center;
       }
     }
+
     .button {
       background-color: transparent;
       width: 155px;
@@ -746,32 +669,32 @@ table {
       border-radius: 58px;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       font-weight: 200;
       font-size: 0.9375rem;
       letter-spacing: -0.04em;
       color: #52322b;
-      float: right;
       cursor: pointer;
       transition: all 0.8s ease-in-out;
       gap: 1em;
       font-weight: 100;
       flex-direction: row;
+
       @media (max-width: 600px) {
-        margin: 0 auto 100px;
-        float: none;
+        margin: 20px auto 0;
       }
-      cursor: pointer;
-      transition: all 0.8s ease-in-out;
+
       svg {
         path {
           transition: all 0.8s ease-in-out;
         }
       }
+
       &:hover {
         border-color: $hover;
         color: $hover;
         transform: translateY(-3px);
+
         svg {
           path {
             stroke: $hover;
@@ -792,31 +715,38 @@ table {
   text-align: center;
   overflow: hidden;
   z-index: 2;
+
   .hero--scroller {
     opacity: 0;
     cursor: pointer;
+
     .hero--scroller--text {
       font-size: rem(9);
       color: $text;
       letter-spacing: normal;
       margin-bottom: 8px;
       transition: all 0.8s ease-in-out;
+
       @media (max-width: 600px) {
         display: none;
       }
     }
+
     .bounce {
       -moz-animation: bounce 2s infinite;
       -webkit-animation: bounce 2s infinite;
       animation: bounce 2s infinite;
+
       path {
         transition: all 0.8s ease-in-out;
       }
     }
+
     &:hover {
       .hero--scroller--text {
         color: $hover;
       }
+
       .bounce {
         path {
           stroke: $hover;
@@ -825,6 +755,7 @@ table {
     }
   }
 }
+
 
 /* FOREVER SECTION */
 
