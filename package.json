@@ -5,14 +5,16 @@
   "main": "public/index.html",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build public/index.html --out-dir dist  --public-url ./",
+    "build": "parcel build public/index.html --out-dir dist  --public-url ./ --no-minify",
     "deploy": "vercel --prod"
   },
   "devDependencies": {
     "@types/three": "^0.139.0",
     "@types/webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-types-0.4.6.tgz",
+    "cssnano": "^7.0.6",
     "parcel-bundler": "^1.6.1",
     "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.5.1",
     "sass": "^1.54.0",
     "typescript": "4.4.4",
     "webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-0.4.6.tgz"
@@ -35,6 +37,7 @@
   "dependencies": {
     "@studio-freight/lenis": "^0.2.24",
     "gsap": "^3.10.4",
+    "htmlnano": "^2.1.1",
     "vercel": "^27.2.0"
   }
 }

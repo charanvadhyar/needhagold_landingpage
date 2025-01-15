@@ -1,4 +1,4 @@
 [build]
   base = "./"  # The directory where Netlify installs dependencies
-  command = "npm run build"  # Your build command
+  command = "npm ci && npm run build"  # Your build command
   publish = "dist"  # The folder containing the output files
