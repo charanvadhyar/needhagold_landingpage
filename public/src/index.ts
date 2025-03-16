@@ -207,11 +207,11 @@ async function setupViewer(){
         introTL
         .to('.loader', {x: '100%', duration: 0.8, ease: "power4.inOut", delay: 1})
         .fromTo(position, 
-            { x: isMobile ? 3 : 3, y: isMobile ? -0.6 : -0.6, z: isMobile ? 1.2 : 1.2 }, 
+            { x: isMobile ? 3 : 3, y: isMobile ? -1.2 : -1.2, z: isMobile ? 1.2 : 1.2 }, 
             { x: isMobile ? 1.28 : 1.28, y: isMobile ? -1.5 : -1.5, z: isMobile ? 5.86 : 5.86 }
           )
           .fromTo(target, 
-            { x: isMobile ? 2.5 : 2.5, y: isMobile ? 0.03 : 0.03, z: isMobile ? -0.1 : -0.1 }, 
+            { x: isMobile ? 2.5 : 2.5, y: isMobile ? -0.3 : -0.3, z: isMobile ? -0.1 : -0.1 }, 
             { x: isMobile ? -0.21 : 0.91, y: isMobile ? 0.1 : 0.1, z: isMobile ? -0.25 : -0.25 }
           )
         .fromTo('.header--container', {opacity: 0, y: '-100%'}, {opacity: 1, y: '0%', ease: "power1.inOut", duration: 0.8}, '-=1')
